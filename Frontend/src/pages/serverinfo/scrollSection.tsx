@@ -2,39 +2,6 @@ import { Img } from "@/components/ui/Img";
 import "../styles/scrollsection.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-// const regionSettingList = [
-//   { regionLabel: "Region", regionValue: "Europe - DE" },
-//   { regionLabel: "Punkbuster", regionValue: "ON" },
-//   { regionLabel: "Fairfight", regionValue: "ON" },
-//   { regionLabel: "Password", regionValue: "OFF" },
-//   { regionLabel: "Preset", regionValue: "Normal" },
-// ];
-
-// const advancedSettingList = [
-//   { label: "Minimap", value: "ON" },
-//   { label: "Only Squad Leader Spawn", value: "OFF" },
-//   { label: "Vehicles", value: "ON" },
-//   { label: "Team Balance", value: "ON" },
-//   { label: "Minimap Spotting", value: "ON" },
-//   { label: "HUD", value: "ON" },
-//   { label: "3P Vehicle Cam", value: "ON" },
-//   { label: "Regenerative Health", value: "ON" },
-//   { label: "Kill Cam", value: "ON" },
-//   { label: "Friendly Fire", value: "OFF" },
-//   { label: "3D Spotting", value: "ON" },
-//   { label: "Enemy Name Tags", value: "ON" },
-// ];
-
-// const rulesSettingList = [
-//   { label: "Tickets", value: "400" },
-//   { label: "Vehicle Spawn Delay", value: "25" },
-//   { label: "Bullet Damage", value: "100" },
-//   { label: "Kick After Team Kills", value: "5" },
-//   { label: "Player Health", value: "100" },
-//   { label: "Player Respawn Time", value: "100" },
-//   { label: "Kick After Idle", value: "300" },
-//   { label: "Ban After Kicks", value: "3" },
-// ];
 
 export default function scrollSection() {
   interface Setting {
@@ -54,17 +21,17 @@ export default function scrollSection() {
   const fetchData = async () => {
     try {
       const regionResponse = await axios.get(
-        "http://localhost:5000/api/region-settings"
+        "https://battlefield4-nine.vercel.app/api/region-settings"
       );
       setRegionSettings(regionResponse.data);
 
       const advancedResponse = await axios.get(
-        "http://localhost:5000/api/advanced-settings"
+        "https://battlefield4-nine.vercel.app/api/advanced-settings"
       );
       setAdvancedSettings(advancedResponse.data);
 
       const rulesResponse = await axios.get(
-        "http://localhost:5000/api/rules-settings"
+        "https://battlefield4-nine.vercel.app/api/rules-settings"
       );
       setRulesSettings(rulesResponse.data);
     } catch (error) {

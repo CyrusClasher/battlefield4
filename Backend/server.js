@@ -3,7 +3,13 @@ const cors = require("cors");
 const app = express();
 const port = 5000; // You can choose any port
 
-app.use(cors()); // Enable Cross-Origin Resource Sharing
+app.use(
+  cors({
+    origin: [""],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+); // Enable Cross-Origin Resource Sharing
 
 // Dummy data (for now)
 const regionSettingList = [

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 // import {Home,NotFound} from "pages/home";
 import { useRoutes } from "react-router-dom";
 import ServerInfo from "./pages/serverinfo/index";

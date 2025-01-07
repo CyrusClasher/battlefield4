@@ -8,8 +8,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\" && vite",
-  "frontend": "vite",
-  "backend": "cd ../game-backend && npm start"
+    "frontend": "vite",
+    "backend": "cd ../game-backend && npm start"
   },
   "dependencies": {
     "@radix-ui/react-separator": "^1.1.1",
@@ -17,6 +17,7 @@
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.7",
     "img": "^3.0.3",
     "kleur": "^4.1.5",
     "lucide-react": "^0.469.0",

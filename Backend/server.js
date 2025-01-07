@@ -51,6 +51,10 @@ app.get("/api/region-settings", (req, res) => {
   res.json(regionSettingList);
 });
 
+app.get("/", (req, res) => {
+  res.send("Working!");
+});
+
 app.get("/api/advanced-settings", (req, res) => {
   res.json(advancedSettingList);
 });

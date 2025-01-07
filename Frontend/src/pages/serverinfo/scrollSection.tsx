@@ -2,6 +2,7 @@ import { Img } from "@/components/ui/Img";
 import "../styles/scrollsection.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+// import { } from "dotenv";
 
 export default function scrollSection() {
   interface Setting {
@@ -21,17 +22,17 @@ export default function scrollSection() {
   const fetchData = async () => {
     try {
       const regionResponse = await axios.get(
-        "https://battlefield4-nine.vercel.app/api/region-settings"
+        `${import.meta.env.VITE_REACTAPP_BACKEND_BASEURL}/api/region-settings`
       );
       setRegionSettings(regionResponse.data);
 
       const advancedResponse = await axios.get(
-        "https://battlefield4-nine.vercel.app/api/advanced-settings"
+        `${import.meta.env.VITE_REACTAPP_BACKEND_BASEURL}/api/advanced-settings`
       );
       setAdvancedSettings(advancedResponse.data);
 
       const rulesResponse = await axios.get(
-        "https://battlefield4-nine.vercel.app/api/rules-settings"
+        `${import.meta.env.VITE_REACTAPP_BACKEND_BASEURL}/api/rules-settings`
       );
       setRulesSettings(rulesResponse.data);
     } catch (error) {

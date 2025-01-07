@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /*------Color variables------*/
+        --black: #1010107f;
+        --color_black_900: #101010;
+        --color_black_900_01: #000c13;
+        --color_black__900_4c: #1010104c;
+        --green_a700: #22c13a;
+        --orange_600: #ee930e;
+        --white_0: #ffffff;
+        --white_1: #ffffffcc;
+        --white_a700_19: #ffffff19;
+        --white_a700_33: #ffffff33;
+        --white_a700_4c: #ffffff4c;
+        --yellow_a4ee: #f3f300;
+
+        --radius-xs: 4px;
+        /*------Spacing variables----- */
+        --space-xs: 4px;
+        --space-sm: 8px;
+        --space-md: 12px;
+        --space-lg: 14px;
+        --space-xl: 16px;
+        --space-2xl: 18px;
+        --space-3xl: 24px;
+        --space-4xl: 34px;
+    }
+
+    [type="text"],
+    input :where(:not([type])),
+    [type=" email"],
+    [type=" url "] [type="password"],
+    [type="number"],
+    [type="date"],
+    [type="datetime-local "],
+    [type="month "],
+    [type=" search "],
+    [type="tel"],
+    [type="time"],
+    [type="week"],
+    [multiple],
+    textarea,
+    select {
+        appearance: initial;
+        background-color: initial;
+        border: initial;
+        border-width: 0;
+    }
+}

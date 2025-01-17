@@ -22,17 +22,17 @@ export default function scrollSection() {
   const fetchData = async () => {
     try {
       const regionResponse = await axios.get(
-        `${import.meta.env.VITE_REACTAPP_BACKEND_BASEURL}/api/region-settings`
+        `https://battlefield4-pied.vercel.app/api/region-settings`
       );
       setRegionSettings(regionResponse.data);
 
       const advancedResponse = await axios.get(
-        `${import.meta.env.VITE_REACTAPP_BACKEND_BASEURL}/api/advanced-settings`
+        `https://battlefield4-pied.vercel.app/api/advanced-settings`
       );
       setAdvancedSettings(advancedResponse.data);
 
       const rulesResponse = await axios.get(
-        `${import.meta.env.VITE_REACTAPP_BACKEND_BASEURL}/api/rules-settings`
+        `https://battlefield4-pied.vercel.app/api/rules-settings`
       );
       setRulesSettings(rulesResponse.data);
     } catch (error) {
